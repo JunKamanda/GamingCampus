@@ -1,0 +1,313 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(./assets/fonts/Montserrat-Medium.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+button{
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: .4s;
+    background: transparent;
+}
+button:hover{
+    background: #fff;
+    color: #000;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #8a2be2;
+}
+h5{
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+body{
+    text-align: center;
+    margin: 0 auto;
+}
+nav{
+    max-width: 900px;
+    margin: 0 auto;
+}
+nav ul{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+nav ul li{
+    text-transform: uppercase;
+    font-size: .78rem;
+    font-weight: 800;
+    padding: 20px 0;
+    position: relative;
+}
+nav ul li:first-child{
+    color: #8a2be2;
+}
+nav ul li:first-child::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #8a2be2;
+}
+#language{
+    background: grey;
+    padding: 10px;
+    border-radius: 150px;
+}
+header{
+    background: url(./assets/img/bg.jpg) fixed center/cover;
+}
+.main-header{
+    padding: 60px;
+}
+#logo img{
+    width: 60%;
+}
+.main-header h1{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+.main-header button{
+    padding: 10px 12px;
+}
+.main-header button i{
+    margin: 0 7px;
+}
+.header-text{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
+.header-text p{
+    font-weight: 700;
+}
+.icon-part{
+    background: #000000dc;
+    padding: 65px 0;
+    color: #f5f5f5;
+}
+.icon-part .icon-part-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.list-icon-part .lip-logo{
+    margin-bottom: 30px;
+}
+.list-icon-part h3{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.list-icon-part p{
+    width: 80%;
+    margin: 10px auto 30px;
+    font-size: .9rem;
+}
+.list-icon-part button{
+    padding: 9px 32px;
+}
+.news-part{
+    background: #e4e4e4;
+    padding: 70px 0;
+}
+.header-news{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+.header-news .left-part h2{
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.header-news .left-part p{
+    font-size: .9rem;
+    font-weight: 700;
+}
+.header-news .right-part button{
+    padding: 9px 30px;
+    border: 1px solid #000;
+    color: #000;
+}
+.header-news .right-part button:hover{
+    background: #000;
+    color: #f5f5f5;
+}
+.header-news .right-part button i{
+    margin-left: 4px;
+}
+.main-news{
+    padding: 50px 0;
+}
+.main-news-container{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.main-news-container > div{
+    width: 30%;
+    text-align: left;
+    position: relative;
+}
+.mn-pic{
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.mn-pic img{
+    width: 100%;
+    border-radius: 3px;
+}
+.main-news-container > div p{
+    font-size: .9rem;
+    margin: 20px 0 40px;
+}
+.main-news-container > div .link{
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+.main-news-container > div .link a i{
+    margin-left: 4px;
+}
+.contact{
+    padding: 70px 0;
+}
+.contact-container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.contact-list{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 40px;
+}
+.contact-list::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(7%);
+    width: 90%;
+    height: 2px;
+    background: #f0f0f0fd;
+}
+.contact-list{
+    text-align: left;
+}
+.list{
+    width: 40%;
+}
+#contact-img{
+    object-fit: cover;
+    text-align: left;
+}
+#contact-img img{
+    width: 70%;
+    height: 200px;
+}
+.contact-list .list h5{
+    text-transform: uppercase;
+}
+.contact-list .list ul li{
+    margin: 10px 0;
+}
+.contact-list .list ul li a{
+    font-size: .7rem;
+    font-weight: 700;
+}
+.contact-list .list p{
+    font-size: .8rem;
+    font-weight: 700;
+    width: 78%;
+}
+.contact-list .list:nth-child(3) p{
+    margin: 10px 0;
+}
+.contact-list .list a{
+    font-size: .8rem;
+    font-weight: 700;
+}
+.contact-list .list h6{
+    margin: 10px 0;
+}
+.network{
+    margin-top: 30px;
+}
+.footer-logos i{
+    margin: 4px 10px 0 0;
+    font-size: .9rem;
+}
+.contact-list .copyright{
+    margin-top: 20px;
+}
+.contact-medias{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 40px;
+}
+.medias-text{
+    text-align: left;
+}
+.medias-text h3{
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+.medias-text P{
+    font-size: .88rem;
+    font-weight: 700;
+}
+.medias-logos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.medias-logos span img{
+    width: 60px;
+}
+footer{
+    background-color: #000000dc;
+    padding: 20px 0;
+}
+footer h3{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 200;
+    padding: 10px 0;
+}
+footer ul{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer ul li img{
+    width: 50px;
+}
