@@ -1,5 +1,5 @@
 # GamingCampus
 
 ##A faire : 
-Le javascript : Menu Hamburger, des petites animations ...
-Le SEO
+Le javascript : Menu Hamburger : Ok , des petites animations : OK ...
+Le SEO : prochainement
