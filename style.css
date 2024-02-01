@@ -7,6 +7,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0 4px;
 }
 button{
     text-transform: uppercase;
@@ -14,12 +18,14 @@ button{
     border: 1px solid #fff;
     color: #fff;
     cursor: pointer;
-    transition: .4s;
+    transition: .9s ease; /*Revoir*/
     background: transparent;
 }
 button:hover{
     background: #fff;
     color: #000;
+    border: 1px solid;
+    transform: rotate(5deg);
 }
 li{
     list-style: none;
@@ -27,9 +33,8 @@ li{
 }
 a{
     text-decoration: none;
-}
-a:hover{
-    color: #8a2be2;
+    transition: 0.5s;
+    color: #030303;
 }
 h5{
     text-transform: uppercase;
@@ -39,56 +44,190 @@ body{
     text-align: center;
     margin: 0 auto;
 }
+/* SIDEBAR */
+/* SIDEBAR */
+#side-bar {
+    position: absolute;
+    top: 0;
+    left: -230px;
+    transition: 0.5s ease-out;
+    z-index: 4000;
+    border: 1px solid black;
+}
+#side-bar.showSidebar{
+    left: 0;
+}
+.showSidebar ~ #All_content{
+    opacity: 0.3;
+  }
+#side-bar #navigate{
+    background: #e4e4e4;
+    width: 230px;
+    height: 55%;
+    display: block;
+}
+#side-bar ul{
+    flex-direction: column;
+    gap: 40px;
+}
+#side-bar ul li{
+    width: 100%;
+    text-align: left;
+    transition: 1s ease-in-out;
+
+}
+#side-bar ul li a{
+    padding: 0 20px;
+}
+#side-bar ul li:hover{
+    background: #030303;
+}
+#side-bar ul li:hover a{
+    color: #e4e4e4;
+}
+#side-bar #language{
+    width: 100%;
+    text-align: center;
+}
+
+#btn {
+    position: absolute;
+    top: 2px;
+    left: 240px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    transition: .4s ease-in-out;
+    /* display: none; */
+}
+  .toggle-btn span {
+    width: 40px;
+    height: 8px;
+    border-radius: 5px;
+    background: #ffffff;
+    display: block;
+    margin-top: 2px;
+    transition: 0.3s ease;
+  }
+  /* .side-bar span{
+    position: absolute;
+  }
+  .side-bar span:nth-child(1){
+    transform: rotate(45deg);
+  }
+  .side-bar span:nth-child(2){
+    opacity: 0;
+  }
+  .side-bar span:nth-child(3){
+    transform: rotate(-45deg);
+  } */
+
+ 
+/* NAVIGATION */
+/* NAVIGATION */
+/* NAVIGATION */
+/* NAVIGATION */
 nav{
-    max-width: 900px;
+    /* max-width: 900px; */
+    width: 100%;
     margin: 0 auto;
+    position: fixed;
+    top: 0;
+    transition: .5s ease-in-out;
+    background: #ffffff;
+    z-index: 1000;
 }
 nav ul{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-around;
     align-items: center;
 }
 nav ul li{
     text-transform: uppercase;
     font-size: .78rem;
-    font-weight: 800;
-    padding: 20px 0;
-    position: relative;
+    font-weight: 900;
+    padding: 15px 4px;
+    transition: .5s ease-in-out;
 }
-nav ul li:first-child{
-    color: #8a2be2;
+nav ul li:hover{
+    background: #000;
 }
-nav ul li:first-child::after{
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #8a2be2;
+nav ul li:hover a{
+    color: #e4e4e4;
+}
+nav ul li:nth-child(1){
+    background: #000;
+}
+nav ul li:nth-child(1) a{
+    color: #e4e4e4;
+}
+nav ul:hover li:not(:hover){
+    background: #fff;
+}
+nav ul:hover li:not(:hover) a{
+    color: #000;
 }
 #language{
     background: grey;
     padding: 10px;
     border-radius: 150px;
+    transition: 0.5s;
 }
+#language:hover{
+    background: #000;
+    color: #e4e4e4;
+}
+/* HEADER */
+/* HEADER */
+/* HEADER */
+/* HEADER */
 header{
     background: url(./assets/img/bg.jpg) fixed center/cover;
+    transition: .4s ease-in-out;
 }
 .main-header{
     padding: 60px;
 }
 #logo img{
     width: 60%;
+    margin-left: 1000px;
+    opacity: 0;
+    transition: 1.3s ease-in;
+}
+#logo img.imgAnim{
+    margin-left: 0;
+    opacity: 1;
 }
 .main-header h1{
     text-transform: uppercase;
     color: #fff;
-    font-size: 1.2rem;
-    margin: 20px 0;
+    font-size: 1rem;
+    margin: 20px 0 40px;
+
+    position: relative;
+    right: 1000px;
+    opacity: 0;
+    transition: 2s ease-in;
 }
-.main-header button{
+.main-header h1.titleHeader{
+    right: 0;
+    opacity: 1;
+}
+.main-header .btnHeader{
     padding: 10px 12px;
+
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    transition: 3s ease-in; /*Revoir*/
+}
+.main-header .btnHeader:hover{
+    transform: none;
+    transition: .7s ease-in-out;/*Revoir*/
+}
+.btnHeader.btnAnim{
+    top: 0px;
+    opacity: 1;
 }
 .main-header button i{
     margin: 0 7px;
@@ -115,6 +254,10 @@ header{
 }
 .list-icon-part .lip-logo{
     margin-bottom: 30px;
+    transition: 1s ease;
+}
+.list-icon-part .lip-logo:hover{
+    transform: rotate(360deg);
 }
 .list-icon-part h3{
     text-transform: uppercase;
@@ -172,6 +315,12 @@ header{
     width: 30%;
     text-align: left;
     position: relative;
+
+    top: 100px;
+    transition: .5s ease-in;
+}
+.main-news-container > div.divAnim{
+    top: 0;
 }
 .mn-pic{
     object-fit: cover;
@@ -180,6 +329,10 @@ header{
 .mn-pic img{
     width: 100%;
     border-radius: 3px;
+    transition: 1s ease;
+}
+.mn-pic img:hover{
+    transform: rotate(10deg);
 }
 .main-news-container > div p{
     font-size: .9rem;
@@ -226,10 +379,12 @@ header{
 #contact-img{
     object-fit: cover;
     text-align: left;
+    height: 200px;
+    width: 170px;
 }
 #contact-img img{
-    width: 70%;
-    height: 200px;
+    width: 100%;
+    height: 100%;
 }
 .contact-list .list h5{
     text-transform: uppercase;
@@ -262,6 +417,11 @@ header{
 .footer-logos i{
     margin: 4px 10px 0 0;
     font-size: .9rem;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+.footer-logos i:hover{
+    transform: rotate(360deg);
 }
 .contact-list .copyright{
     margin-top: 20px;
@@ -290,7 +450,13 @@ header{
 }
 .medias-logos span img{
     width: 60px;
+    transition: 1s ease-in-out;
+    cursor: pointer;
 }
+.medias-logos span img:hover{
+    transform: rotate(360deg);
+}
+
 footer{
     background-color: #000000dc;
     padding: 20px 0;
@@ -310,4 +476,114 @@ footer ul{
 }
 footer ul li img{
     width: 50px;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+footer ul li img:hover{
+    transform: rotate(360deg);
+}
+
+/* RESPONSIVE RESPONSIVE RESPONSIVE */
+/* RESPONSIVE RESPONSIVE RESPONSIVE */
+/* RESPONSIVE RESPONSIVE RESPONSIVE */
+@media screen and (max-width: 800px){
+    nav ul li{
+        font-size: .7rem;
+    }
+    .header-text p{
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width: 730px){
+    .list-icon-part button{
+        font-size: .6rem;
+    }
+}
+@media screen and (max-width: 790px){
+    .icon-part .icon-part-container{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+@media screen and (max-width: 700px){
+    .contact{
+        display: none;
+    }
+}
+@media screen and (max-width: 697px){
+    nav{
+        display: none;
+    }
+}
+@media screen and (max-width: 630px){
+    nav{
+        display: none;
+    }
+    #logo img{
+        width: 100%;
+    }
+    .main-header h1{
+        font-size: 0.8rem;
+    }
+    .main-header .btnHeader{
+        font-size: 0.7rem;
+    }
+    
+    .icon-part .icon-part-container{
+        flex-direction: column;
+    }
+    .list-icon-part{
+        margin: 30px 0;
+    }
+    .list-icon-part .lip-logo img{
+        width: 50%;
+    }
+    .list-icon-part button{
+        width: 50%;
+        font-size: .7rem;
+    }
+    .main-news{
+        padding: 30px 0;
+    }
+    .news-part{
+        padding: 0;
+    }
+    .header-news{
+        grid-template-columns: none;
+        justify-content: center;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .header-news .left-part p{
+        margin: 10px 0;
+    }
+    .main-news-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-news-container > div{
+        width: 90%;
+        margin: 20px 0;
+    }
+    .mn-pic{
+        width: 100%;
+    }
+    .mn-pic img{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer{
+        padding: 20px 30px;
+    }
+    footer h3{
+        font-size: .9rem;
+    }
+    footer ul{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    footer ul li img{
+        width: 40px;
+    }
 }

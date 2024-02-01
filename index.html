@@ -5,33 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- ICON -->
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
+  <!-- TITLE -->
   <title>TP5 - Gaming Campus</title>
+  <meta name="description" content="">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gaming_Campus" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="./img/favicon.png" />
+
+  <!-- FONTS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  
+  <!-- CSS -->
   <link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
+  <div id="side-bar">
+    <div class="toggle-btn" id="btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="navigate">
+      <ul>
+        <li class="active"><a href="#accueil">Accueil</a></li>
+        <li><a href="#icon-part">cours de jeux vidéo</a></li>
+        <li><a href="#news-part">le campus</a></li>
+        <li><a href="#contact">parents</a></li>
+        <li id="language"><a href="www.google.com">FR | EN</a></li>
+      </ul>
+    </nav>
+  </div>
+
+<div id="All_content">
+  <nav id="nav">
     <ul>
-      <li>Accueil</li>
-      <li>business school</li>
-      <li>ecole esport</li>
-      <li>cours de jeux vidéo</li>
-      <li>le campus</li>
-      <li>news room</li>
-      <li>parents</li>
+      <li><a href="#" class="active">Accueil</a></li>
+      <li><a href="#icon-part">cours de jeux vidéo</a></li>
+      <li><a href="#news-part">le campus</a></li>
+      <li><a href="#contact">parents</a></li>
       <li id="language">FR | EN</li>
     </ul>
   </nav>
-  <header>
+  <header id="accueil">
     <div class="main-header">
       <div id="logo">
         <img src="./assets/img/logo-gc-hero.png" alt="logo">
       </div>
-      <h1>passion. professionnalisme. performance.</h1>
-      <button>gaming campus en video <i class="fas fa-angle-right"></i></button>
+      <h1 id="titleHeader">passion. professionnalisme. performance.</h1>
+      <button class="btnHeader">gaming campus en video <i class="fas fa-angle-right"></i></button>
     </div>
   </header>
 
@@ -40,7 +68,7 @@
       les talents et développer les compétences.</p>
   </div>
 
-  <section class="icon-part">
+  <section class="icon-part" id="icon-part">
     <div class="icon-part-container">
       <div class="list-icon-part">
         <div class="lip-logo">
@@ -69,7 +97,7 @@
     </div>
   </section>
 
-  <section class="news-part">
+  <section class="news-part" id="news-part">
     <div class="header-news">
       <div class="left-part">
         <h2>les news du campus</h2>
@@ -119,7 +147,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="contact-container">
       <div class="contact-list">
         <div class="list">
@@ -210,10 +238,8 @@
       <li><img src="./assets/img/vitality.png" alt="vitality"></li>
     </ul>
   </footer>
+</div>
 
-
+  <script src="./index.js"></script>
 </body>
-
-
-
 </html>
